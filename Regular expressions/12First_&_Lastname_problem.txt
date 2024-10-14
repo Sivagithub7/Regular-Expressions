@@ -1,0 +1,18 @@
+First_&_Lastname_problem:
+=========================
+
+root@bob:~/Regex# cat > regex19
+John Wallace
+Steve King
+Martin Cook
+Adam Smith
+Irene Peter
+Alice Johnson
+^C
+root@bob:~/Regex# sed -r 's/([a-zA-Z]+)\s([a-zA-Z]+)/\2,\1/g' regex19
+Wallace,John
+King,Steve
+Cook,Martin
+Smith,Adam
+Peter,Irene
+Johnson,Alice

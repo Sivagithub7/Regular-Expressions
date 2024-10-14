@@ -1,0 +1,35 @@
+Monitor_resolutions_problems
+============================
+sed cmd:
+
+root@bob:~/Regex# cat > regex18
+1280x720
+1920x1080
+1600x900
+1280x1024
+800x600
+1024x768
+^C
+root@bob:~/Regex# sed -r 's/([0-9]+)x([0-9]+)/\1 pix by \2 pix/g' regex18
+1280 pix by 720 pix
+1920 pix by 1080 pix
+1600 pix by 900 pix
+1280 pix by 1024 pix
+800 pix by 600 pix
+1024 pix by 768 pix
+
+root@bob:~/Regex# sed -r 's/([0-9]+)x([0-9]+)/\1 pix by pix/g' regex18  --- \2 removed
+1280 pix by pix
+1920 pix by pix
+1600 pix by pix
+1280 pix by pix
+800 pix by pix
+1024 pix by pix
+
+root@bob:~/Regex# sed -r 's/([0-9]+)x([0-9]+)/\1 pix by \1 pix/g' regex18 --- \1 added againh
+1280 pix by 1280 pix
+1920 pix by 1920 pix
+1600 pix by 1600 pix
+1280 pix by 1280 pix
+800 pix by 800 pix
+1024 pix by 1024 pix

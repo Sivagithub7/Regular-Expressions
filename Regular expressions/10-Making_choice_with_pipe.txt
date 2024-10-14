@@ -1,0 +1,16 @@
+Making_choice_with_pipe
+=======================
+
+(a|b) represents either a or b, where a and b can be multi-character strings.
+
+root@bob:~/Regex# cat > regex17
+sapwood
+rosewood
+logwood
+teakwood
+plywood
+redwood
+^C
+root@bob:~/Regex# grep -E '(log|ply)wood' regex17
+logwood
+plywood

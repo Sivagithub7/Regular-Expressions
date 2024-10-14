@@ -1,0 +1,40 @@
+1) Which of the following regular expressions can be used to represent both the strings 'gray' and 'grey'
+
+gr[ae]y
+gr.y
+gr[a-z]y
+all of the above ----------correct
+
+
+2) Which of the following regular expressions represent a two digit even number?
+
+^[0-9][02468]$
+
+
+3) Which of the following regular expressions represent all 3 digit numbers that are multiples of 5?
+
+^[0-9][0-9][05]$
+
+
+4) Which of the following regular expressions can represent the words 'colour' as well as 'color'?
+colou?r
+
+
+5) Which of the following regular expressions can represent the words 'ascending' as well as 'descending'?
+(asc|dec)ending
+
+
+6) Which of the following regular expressions can represent all of the strings 'a','aa' and 'aaa' , AND should exclude empty strings?
+a+
+
+
+7) Which of the following represent a capture group , inside a replacement string?
+1\
+
+
+8) Given a US state code and a US zip code , separated by a space, (E.g. NY 10520) which of the following regular expression would capture the state code into capture group 1 and the zip code into capture group 2?
+([A-Z]+)\s([0-9]+)
+
+
+9) The dollar price tag of a product(e.g. $21.44) is captured using the regex: \$([0-9]+)\.([0-9]+). Which of the below substitution string can you use transform it to a string of the format: '44 cents and 21 dollars'?
+\2 cents and \1 dollars

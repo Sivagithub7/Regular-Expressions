@@ -1,0 +1,46 @@
+Anchors:
+
+ex 1:
+
+root@bob:~/Regex# cat > regex10
+foo bar baz --------
+bar foo baz
+baz foo bar
+bar baz foo
+foo baz bar ---------
+baz bar foo
+^C
+root@bob:~/Regex# grep '^foo.*' regex10
+foo bar baz
+foo baz bar
+
+ex 2:
+
+$ is a placeholder that signifies end of the line.
+
+root@bob:~/Regex# cat > regex11
+foo bar baz
+bar foo baz
+baz foo bar -----------
+bar baz foo
+foo baz bar -------------
+baz bar foo
+^C
+
+root@bob:~/Regex# grep '.*bar$' regex10
+baz foo bar
+foo baz bar
+
+ex 3:
+
+want only one single string then
+root@bob:~/Regex# cat > regex12
+foo --------------------------
+foo bar
+baz foo
+foo bar baz
+baz bar foo
+^C
+
+root@bob:~/Regex# grep '^foo$' regex12
+foo

@@ -1,0 +1,75 @@
+Escaping with Backslash:
+=======================
+ex 1:
+root@bob:~/Regex# cat > regex06
+xxx.yy
+xx.yyyy
+x.yy
+xy
+xxyy
+yyxx
+yx
+yxxx
+^C
+root@bob:~/Regex# grep 'x*\.y*' regex06
+xxx.yy
+xx.yyyy
+x.yy
+
+
+ex 2:
+root@bob:~/Regex# cat > regex07
+x#y
+x:y
+x.y
+x&y
+x%y
+^C
+
+root@bob:~/Regex# grep 'x[#:&]y' regex07
+x#y
+x:y
+x&y
+
+
+ex 3:
+If any of the character ^, - appear inside square brackets, it needs to be escaped with a backslash as these two characters have special meaning inside square brackets.
+
+root@bob:~/Regex# cat > regex09
+x#y
+x\y
+x^y
+x&y
+x%y
+^C
+
+root@bob:~/Regex# grep '[#\^]' regex09
+x#y
+x\y
+x^y
+
+root@bob:~/Regex# grep '[#\\\^]' regex09
+x#y
+x\y
+x^y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

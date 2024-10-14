@@ -1,0 +1,24 @@
+Regular Expressions (Regex): Regex are a way to search for patterns within Datasets.
+============================
+
+--> It is not a programming language, but itself it will support programming languages.
+--> It is a sequence of characters that define a search pattern.
+
+
+Steps to build Regex:
+=====================
+
+step 1: Understand the requirement: 
+what needs to be included?
+What needs to be excluded?
+
+Step 2: Identify patterns in the inclusions list or he exclusion list.
+
+step 3: Represent the patterns using regex.
+
+step 4: Use a regex engine like grep or python or java to apply the regex pattern on the input.
+
+
+Regex: All major programming language come with regex engine.
+======
+ex: Java, Python, Linux commands like grep, sed, awk etc..

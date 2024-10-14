@@ -1,0 +1,20 @@
+Single ended Curley braces repeater:
+===================================
+
+root@bob:~/Regex# cat regex14
+ha
+haha
+hahahahaha
+hahahaha
+hahaha
+hahahahahahaha
+hahahahahaha
+
+root@bob:~/Regex# grep -E '^(ha){,2}$' regex14
+ha
+haha
+
+root@bob:~/Regex# grep -E '^(ha){,3}$' regex14
+ha
+haha
+hahaha

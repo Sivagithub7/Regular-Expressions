@@ -1,0 +1,17 @@
+The plus repeater:
+=================
+
+a+  -One or more occurrences of 'a' (The character  just preceding he plus symbol).
+
+root@bob:~/Regex# cat > regex15
+fooaaaabar
+fooabar
+foobar
+fooaabar
+fooxxxbar
+fooxbar
+^C
+root@bob:~/Regex# grep -E 'fooa+bar' regex15
+fooaaaabar
+fooabar
+fooaabar

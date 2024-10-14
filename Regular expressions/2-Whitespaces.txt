@@ -1,0 +1,24 @@
+Whitespaces:
+===========
+
+\s represent whitespace. \s* represents zero or more occurrences of whitespaces.
+
+root@bob:~/Regex# cat > regex03
+fooxxxbar
+foo   bar
+fooxbar
+fooxxbar
+foo bar
+foo      bar
+foobar
+fooyyybar
+^C
+
+root@bob:~/Regex# grep 'foo\sbar' regex03
+foo bar
+
+root@bob:~/Regex# grep 'foo\s*bar' regex03
+foo   bar
+foo bar
+foo      bar
+foobar 

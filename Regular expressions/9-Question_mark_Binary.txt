@@ -1,0 +1,15 @@
+Question mark Binary
+====================
+a? --Zero or more occurrences of 'a' (The character just preceding the question mark)
+
+root@bob:~/Regex# cat > regex16
+https://website
+http://website
+httpss://website
+httpx://website
+httpxx://website
+^C
+root@bob:~/Regex# grep 'https?://website' regex16
+root@bob:~/Regex# grep -E 'https?://website' regex16
+https://website
+http://website

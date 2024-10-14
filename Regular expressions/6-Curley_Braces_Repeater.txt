@@ -1,0 +1,27 @@
+Curley Braces Repeater:
+======================
+
+a{m} represents exactly 'm' repetitions of whatever immediately precedes this, i.e. 'a'
+
+root@bob:~/Regex# cat > regex13
+834
+519
+4874
+5
+89
+45687
+25
+645
+^C
+
+root@bob:~/Regex# grep '[0-9]{3}' regex13
+
+root@bob:~/Regex# grep '^[0-9]{3}$' regex13
+
+root@bob:~/Regex# grep -E '^[0-9]{3}$' regex13
+834
+519
+645
+root@bob:~/Regex# grep -E '^[0-9]{4}$' regex13
+4874
+

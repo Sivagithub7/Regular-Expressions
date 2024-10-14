@@ -1,0 +1,45 @@
+Character Classes:
+=================
+[^xyz] - Any character EXCEPT any of the ones inside the square brackets, in a single position.
+
+root@bob:~/Regex# cat > regex04
+foo
+moo
+coo
+doo
+poo
+loo
+boo
+hoo
+^C
+root@bob:~/Regex# grep '[^mb]oo' regex04
+foo
+coo
+doo
+poo
+loo
+hoo
+
+
+Character classes with ranges:
+=============================
+[a-dm]- One of the character failing in the range OR any of the other choices given in square brackets-a,b,c,d,m
+
+root@bob:~/Regex# cat > regex05
+joo
+boo
+koo
+loo
+woo
+moo
+zoo
+coo
+^C
+
+root@bob:~/Regex# grep '[j-m,z]oo' regex05
+joo
+koo
+loo
+moo
+zoo
+

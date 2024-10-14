@@ -1,0 +1,42 @@
+Wildcard symbol:
+===============
+.  --> this dot represent any one character in single position
+
+root@bob:~/Regex# cat regex01
+fooabar
+fooxbar
+baryfoo
+foobar
+fooxybar
+foocbar
+
+root@bob:~/Regex# grep 'fooa*bar' regex01 (here * is everything)
+fooabar
+foobar
+
+root@bob:~/Regex# grep 'foo.bar' regex01  (single wildcard)
+fooabar
+fooxbar
+foocbar
+
+
+Wildcard Asterisk Combo:
+=======================
+.*  --> Zero or more occurrences of wild card, which means zero or more occurrences of any character.
+
+root@bob:~/Regex# cat > regex02
+foobar
+barfoo
+fooabcbar
+foobxcbar
+barcbyfoo
+foozbar
+barafoo
+barabfoo
+^C
+root@bob:~/Regex# grep 'foo.*bar' regex02
+foobar
+fooabcbar
+foobxcbar
+foozbar
+ 
